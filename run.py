@@ -35,7 +35,14 @@ class GameBoard:
 
 
 class Battleship:
-    
+    """
+    Create battleship objects in a board entity. This class
+    will create 5 battleships. Via its methods it will add them
+    to the hidden computer's board, it will get and return the user's inputs for
+    row and column, it will handle any user input errors, return the user input
+    and count the hit battleships.
+    """
+
     def __init__(self, board):
         self.board = board
 
