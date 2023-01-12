@@ -53,9 +53,27 @@ class Battleship:
                 computer_y_column = random.randint(0, 7)
             self.board[computer_x_row][computer_y_column] = "X"
         return self.board
-
     
-computer_board = GameBoard([[" "] * 8 for i in range(8)])
+
+    def get_user_input(self):
+        """
+        Method used to get the user's inputs, row and column
+        it will also handle user's input errors
+        """
+        try:
+            user_x_row = input("Enter the row of the ship: ")
+            while user_x_row not in '1,2,3,4,5,6,7,8':
+                print(f'{user_x_row} is not an appropriate choice, please select a row between 1 and 8')
+                user_x_row = input("Enter the row of the ship: ")
+
+            user_y_column = input("Enter the column of the ship: ").upper()
+            while user_y_column not in 'A,B,C,D,E,F,G,H':
+                print(f'{user_y_column} is not an appropriate choice, please select a column between A and H')
+                user_y_column = input("Enter the column of the ship: ").upper()
+            return int(user_x_row) - 1, GameBoard.convert_letters_to_numbers()[user_y_column]
+        except Exception as e:
+            print("That's not even in the ocean")
+            return Battleship.get_user_input(self)
 
 print(Battleship.create_ships(computer_board))
 
