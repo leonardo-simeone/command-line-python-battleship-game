@@ -34,5 +34,21 @@ class Battleship:
     def __init__(self, board):
         self.board = board
 
+    def create_ships(self):
+        """
+        Method used to create the computer's ships
+        and add them to the computer's hidden board
+        """
+        for i in range(5):
+            computer_x_row = random.randint(0, 7)
+            computer_y_column = random.randint(0, 7)
+
+            while self.board[computer_x_row][computer_y_column] == "X":
+                computer_x_row = random.randint(0, 7)
+                computer_y_column = random.randint(0, 7)
+            self.board[computer_x_row][computer_y_column] = "X"
+        return self.board
+
+    
 
 print(GameBoard.convert_letters_to_numbers()["C"])
