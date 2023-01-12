@@ -1,5 +1,14 @@
 import random # Import random module
+
+
 class GameBoard:
+    """
+Create an object of an entity board. This class
+will create 2 objects, the user's board and the computer's
+board. It also has methods that will allow to print the user's board
+while keeping the computer's hidden and return the column value to the
+user's input key by using the letters_to_numbers dictionary.
+"""
 
     def __init__(self, board):
         self.board = board
