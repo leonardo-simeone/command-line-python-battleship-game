@@ -29,7 +29,10 @@ user's input key by using the letters_to_numbers dictionary.
             row_number += 1
 
 
-user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
-print(user_guess_board.print_board())
+class Battleship:
+    
+    def __init__(self, board):
+        self.board = board
+
 
 print(GameBoard.convert_letters_to_numbers()["C"])
