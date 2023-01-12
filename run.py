@@ -55,5 +55,8 @@ class Battleship:
         return self.board
 
     
+computer_board = GameBoard([[" "] * 8 for i in range(8)])
+
+print(Battleship.create_ships(computer_board))
 
 print(GameBoard.convert_letters_to_numbers()["C"])
