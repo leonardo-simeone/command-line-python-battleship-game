@@ -75,6 +75,10 @@ class Battleship:
             print("That's not even in the ocean")
             return Battleship.get_user_input(self)
 
-print(Battleship.create_ships(computer_board))
+user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
 
-print(GameBoard.convert_letters_to_numbers()["C"])
+user_x_row = Battleship(user_guess_board)
+user_y_column = Battleship(user_guess_board)
+
+user_x_row.get_user_input()
+user_y_column.get_user_input()
