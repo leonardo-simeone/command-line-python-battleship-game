@@ -81,6 +81,14 @@ class Battleship:
         except Exception as e:
             print("That's not even in the ocean")
             return Battleship.get_user_input(self)
+    
+    def count_destroyed_ships(self):
+        hit_ships = 0
+        for row in self.board:
+            for column in row:
+                if column == "X":
+                    hit_ships += 1
+        return hit_ships
 
 user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
 
