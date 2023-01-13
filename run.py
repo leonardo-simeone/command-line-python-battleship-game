@@ -83,6 +83,10 @@ class Battleship:
             return Battleship.get_user_input(self)
     
     def count_destroyed_ships(self):
+        """
+        Method used to count how many ships from the hidden
+        computer's board the user has hit
+        """
         hit_ships = 0
         for row in self.board:
             for column in row:
