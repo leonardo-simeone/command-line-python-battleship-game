@@ -100,17 +100,36 @@ def run_game():
     Function to run the game utilizing the Gameboard and Battleship classes
     and their corresponding methods
     """
-    print("Let's play Battleship!")
+    print("Let's Play Battleship!")
     print("")
-    print("RULES:")
+    print("RULES:\n")
     print("- There are 5 battleships hidden in the board.")
     print("- You have 20 missiles to sink them all.")
     print("- If you sink all 5 battleships before running out")
     print("  of missiles you win!")
     print("- You must choose your missiles coordinates by selecting")
     print("  a row in the board between 1 and 8 as well as a column")
-    print("  between A and H")
+    print("  between A and H.\n")
     computer_board = GameBoard([[" "] * 8 for i in range(8)])
     user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
     Battleship.create_ships(computer_board)
 
+    # start 20 turns
+    turns = 20
+    while turns > 0:
+        GameBoard.print_board(user_guess_board)
+        # get user input
+        user_x_row, user_y_column = Battleship.get_user_input(object)
+        # check if user's duplicate guess
+        while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "X":
+            print("You shot a missile to that coordinate already!")
+            user_x_row, user_y_column = Battleship.get_user_input(object)
+        # check for hit or miss
+        if computer_board.board[user_x_row][user_y_column] == "X":
+            print("You sunk 1 of my battleships!")
+            user_guess_board.board[user_x_row][user_y_column] = "X"
+        else:
+            print("You missed!")
+            user_guess_board.board[user_x_row][user_y_column] = "-"
+
+run_game()
