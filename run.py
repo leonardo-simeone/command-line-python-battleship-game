@@ -30,7 +30,7 @@ class GameBoard:
         print("   +-+-+-+-+-+-+-+-+-+-+-")
         row_number = 1
         for row in self.board:
-            print("%d|%s|" % (row_number, "|".join(row)))
+            print("%d|%s" % (row_number, " ".join(row)))
             row_number += 1
 
 
