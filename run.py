@@ -1,4 +1,4 @@
-import random # Import random module
+import random  # Import random module
 
 
 class GameBoard:
@@ -18,12 +18,13 @@ class GameBoard:
         Method used to return the user's
         input key utilizing a dictionary
         """
-        letters_to_numbers = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4,
-                              "F": 5, "G": 6, "H": 7}
+        letters_to_numbers = {
+            "A": 0, "B": 1, "C": 2, "D": 3, "E": 4,
+            "F": 5, "G": 6, "H": 7}
         return letters_to_numbers
 
     def print_board(self):
-        """ 
+        """
         Method used to print the user's board
         """
         print("   A  B  C  D  E  F  G  H")
@@ -38,8 +39,9 @@ class Battleship:
     """
     Create battleship objects in a board entity. This class
     will create 5 battleships. Via its methods it will add them
-    to the hidden computer's board, it will get and return the user's inputs for
-    row and column, it will handle any user input errors, return the user input
+    to the hidden computer's board,
+    it will get and return the user's inputs for row and column,
+    it will handle any user input errors, return the user input
     and count the hit battleships.
     """
 
@@ -60,7 +62,6 @@ class Battleship:
                 computer_y_column = random.randint(0, 7)
             self.board[computer_x_row][computer_y_column] = "🚢"
         return self.board
-    
 
     def get_user_input(self):
         """
@@ -70,18 +71,23 @@ class Battleship:
         try:
             user_x_row = input("Enter the row of the ship: \n")
             while user_x_row not in '1,2,3,4,5,6,7,8':
-                print(f'{user_x_row} is not an appropriate choice, please select a row between 1 and 8')
+                print(
+                    f'{user_x_row} is not an appropriate choice, '
+                    'please select a row between 1 and 8')
                 user_x_row = input("Enter the row of the ship: \n")
 
             user_y_column = input("Enter the column of the ship: \n").upper()
             while user_y_column not in 'A,B,C,D,E,F,G,H':
-                print(f'{user_y_column} is not an appropriate choice, please select a column between A and H')
-                user_y_column = input("Enter the column of the ship: \n").upper()
-            return int(user_x_row) - 1, GameBoard.convert_letters_to_numbers()[user_y_column]
+                print(
+                    f'{user_y_column} is not an appropriate choice, '
+                    'please select a column between A and H')
+                user_y_column = input(
+                    "Enter the column of the ship: \n").upper()
+            return int(user_x_row) - 1, GameBoard.convert_letters_to_numbers()[user_y_column]  # noqa
         except Exception as e:
             print("That's not even in the ocean 🤔")
             return Battleship.get_user_input(self)
-    
+
     def count_destroyed_ships(self):
         """
         Method used to count how many ships from the hidden
@@ -121,7 +127,7 @@ def run_game():
         user_x_row, user_y_column = Battleship.get_user_input(object)
 
         # check if user's duplicate guess
-        while user_guess_board.board[user_x_row][user_y_column] == "❌" or user_guess_board.board[user_x_row][user_y_column] == "🚢":
+        while user_guess_board.board[user_x_row][user_y_column] == "❌" or user_guess_board.board[user_x_row][user_y_column] == "🚢":  # noqa
             print("You shot a missile to that coordinate already! 🖐")
             user_x_row, user_y_column = Battleship.get_user_input(object)
 
@@ -149,5 +155,6 @@ def run_game():
                 print("Sorry you ran out of missiles")
                 GameBoard.print_board(user_guess_board)
                 break
+
 
 run_game()
