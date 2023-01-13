@@ -94,12 +94,23 @@ class Battleship:
                     hit_ships += 1
         return hit_ships
 
-user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
 
-user_guess_board.board[3][0] = "X"
-user_guess_board.board[5][3] = "X"
-user_guess_board.board[0][6] = "X"
-user_guess_board.print_board()
-print(" ")
-print(Battleship.count_destroyed_ships(user_guess_board))
+def run_game():
+    """
+    Function to run the game utilizing the Gameboard and Battleship classes
+    and their corresponding methods
+    """
+    print("Let's play Battleship!")
+    print("")
+    print("RULES:")
+    print("- There are 5 battleships hidden in the board.")
+    print("- You have 20 missiles to sink them all.")
+    print("- If you sink all 5 battleships before running out")
+    print("  of missiles you win!")
+    print("- You must choose your missiles coordinates by selecting")
+    print("  a row in the board between 1 and 8 as well as a column")
+    print("  between A and H")
+    computer_board = GameBoard([[" "] * 8 for i in range(8)])
+    user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
+    Battleship.create_ships(computer_board)
 
