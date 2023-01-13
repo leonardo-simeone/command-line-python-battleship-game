@@ -120,16 +120,35 @@ def run_game():
         GameBoard.print_board(user_guess_board)
         # get user input
         user_x_row, user_y_column = Battleship.get_user_input(object)
+
         # check if user's duplicate guess
         while user_guess_board.board[user_x_row][user_y_column] == "-" or user_guess_board.board[user_x_row][user_y_column] == "X":
             print("You shot a missile to that coordinate already!")
             user_x_row, user_y_column = Battleship.get_user_input(object)
+
         # check for hit or miss
         if computer_board.board[user_x_row][user_y_column] == "X":
             print("You sunk 1 of my battleships!")
             user_guess_board.board[user_x_row][user_y_column] = "X"
+
         else:
             print("You missed!")
             user_guess_board.board[user_x_row][user_y_column] = "-"
+
+        # check for win or lose
+        if Battleship.count_destroyed_ships(user_guess_board) == 5:
+            print("CONGRATULATIONS! You hit all 5 battleships!")
+            GameBoard.print_board(user_guess_board)
+            break
+
+        # let the user know how many turns are left
+        else:
+            turns -= 1
+            print(f"You have {turns} missiles remaining")
+
+            if turns == 0:
+                print("Sorry you ran out of missiles")
+                GameBoard.print_board(user_guess_board)
+                break
 
 run_game()
