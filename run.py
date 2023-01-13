@@ -92,8 +92,10 @@ class Battleship:
 
 user_guess_board = GameBoard([[" "] * 8 for i in range(8)])
 
-user_x_row = Battleship(user_guess_board)
-user_y_column = Battleship(user_guess_board)
+user_guess_board.board[3][0] = "X"
+user_guess_board.board[5][3] = "X"
+user_guess_board.board[0][6] = "X"
+user_guess_board.print_board()
+print(" ")
+print(Battleship.count_destroyed_ships(user_guess_board))
 
-user_x_row.get_user_input()
-user_y_column.get_user_input()
