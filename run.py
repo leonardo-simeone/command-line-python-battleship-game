@@ -27,8 +27,8 @@ class GameBoard:
         """
         Method used to print the user's board
         """
-        print("   A  B  C  D  E  F  G  H")
-        print("   +-+-+-+-+-+-+-+-+-+-+-")
+        print("   ABCDEFGH")
+        print("  +-+-+-+-+")
         row_number = 1
         for row in self.board:
             print("%d|%s" % (row_number, " ".join(row)))
