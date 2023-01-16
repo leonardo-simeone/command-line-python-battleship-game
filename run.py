@@ -171,6 +171,11 @@ def print_rules():
     print("  between A and H.\n")
 
 
+def run_game():
+    """
+    Function to run the game utilizing the Gameboard and Battleship classes
+    and their corresponding methods as well as complement functions
+    """
     computer_board = GameBoard([["⬛"] * 8 for i in range(8)])
     user_guess_board = GameBoard([["⬛"] * 8 for i in range(8)])
     Battleship.create_ships(computer_board)
@@ -179,17 +184,19 @@ def print_rules():
     turns = 20
     while turns > 0:
         GameBoard.print_board(user_guess_board)
-        # get user input
         user_x_row, user_y_column = Battleship.get_user_input(object)
+        clear()
 
         # check if user's duplicate guess
         while user_guess_board.board[user_x_row][user_y_column] == "❌" or user_guess_board.board[user_x_row][user_y_column] == "🚢":  # noqa
-            print("You shot a missile to that coordinate already! 🖐")
+            print("You shot a missile to that coordinate already!🖐")
+            GameBoard.print_board(user_guess_board)
             user_x_row, user_y_column = Battleship.get_user_input(object)
+            clear()
 
         # check for hit or miss
         if computer_board.board[user_x_row][user_y_column] == "🚢":
-            print("🔥You sunk 1 of my battleships!🔥")
+            print("🔥 You sunk 1 of my battleships!🔥")
             user_guess_board.board[user_x_row][user_y_column] = "🚢"
 
         else:
@@ -200,7 +207,8 @@ def print_rules():
         if Battleship.count_destroyed_ships(user_guess_board) == 5:
             print("CONGRATULATIONS! You hit all 5 battleships!🎉🎈")
             GameBoard.print_board(user_guess_board)
-            break
+            print("You've Won!")
+            return play_again_option()
 
         # let the user know how many turns are left
         else:
@@ -210,10 +218,14 @@ def print_rules():
             if turns == 0:
                 print("Sorry you ran out of missiles")
                 GameBoard.print_board(user_guess_board)
+                play_again_option()
+
+
 def play_again_option():
     """
-    Function to ask the user once they've finished whether
-    they want to play again or end the program
+    Function to ask the user once they've finished
+    the game whether they want to play again or
+    end the program
     """
     try:
         play_again = input(
