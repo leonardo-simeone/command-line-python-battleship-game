@@ -93,8 +93,42 @@ class Battleship:
                     "Enter the column of the ship: \n").upper()
             return int(user_x_row) - 1, GameBoard.convert_letters_to_numbers()[user_y_column]  # noqa
         except Exception as e:
-            print("That's not even in the ocean 🤔")
+            print("That's not even in the ocean🤔")
             return Battleship.get_user_input(self)
+
+    def intro_to_game(self):
+        """
+        Method used to get the user's inputs, to select
+        whether they want to read the rules and start the
+        game or simply start the game
+        """
+        try:
+            user_choice = input(
+                "To see the rules press 'R', to start the game "
+                "press 'G': \n").upper()
+            while user_choice not in 'R,G':
+                print(
+                    f"{user_choice} is not a valid option please select "
+                    "an option between 'R' and 'G'")
+                user_choice = input(
+                    "To see the rules press 'R', to start the game "
+                    "press 'G': \n").upper()
+
+        except Exception as e:
+            print("Please select a valid option")
+            return Battleship.intro_to_game(self)
+
+        if user_choice == "R":
+            print_rules()
+            run_game()
+
+        if user_choice == "G":
+            clear()
+            run_game()
+
+        if user_choice == "":
+            print("Please select a valid option")
+            Battleship.intro_to_game(self)
 
     def count_destroyed_ships(self):
         """
