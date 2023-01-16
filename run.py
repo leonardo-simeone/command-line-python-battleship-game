@@ -160,6 +160,7 @@ def print_intro():
         "select one of the two options\n"
         "below 👇 :\n")
 
+
 def print_rules():
     """
     Function to print the game rules should the user
@@ -195,10 +196,13 @@ def run_game():
         GameBoard.print_board(user_guess_board)
         user_x_row, user_y_column = Battleship.get_user_input(object)
         clear()
+        clear()
 
         # check if user's duplicate guess
         while user_guess_board.board[user_x_row][user_y_column] == "❌" or user_guess_board.board[user_x_row][user_y_column] == "🚢":  # noqa
-            print("You shot a missile to that coordinate already!🖐")
+            print(
+                "You fired a missile to that\n"
+                "coordinate already!🖐")
             GameBoard.print_board(user_guess_board)
             user_x_row, user_y_column = Battleship.get_user_input(object)
             clear()
