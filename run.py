@@ -168,14 +168,13 @@ def print_rules():
     """
     clear()
     print(
-        "🚢  Let's Play Battleship! 🚢\n"
         "🧾  RULES 🧾 :\n"
-        "- There are 5 battleships 🚢\n"
+        "* There are 5 battleships 🚢\n"
         "  hidden in the board.\n"
-        "- You have 20 missiles 🚀\n"
-        "- To win, sink them all before\n"
+        "* You have 20 missiles 🚀\n"
+        "* To win, sink them all before\n"
         "  running out of missiles.\n"
-        "- Choose your missiles\n"
+        "* Choose your missiles\n"
         "  coordinates by selecting a\n"
         "  row between 1 and 8, also\n"
         "  a column between A and H.\n")
@@ -186,6 +185,7 @@ def run_game():
     Function to run the game utilizing the Gameboard and Battleship classes
     and their corresponding methods as well as complement functions
     """
+    print("🚢  Let's Play Battleship! 🚢\n")
     computer_board = GameBoard([["⬛"] * 8 for i in range(8)])
     user_guess_board = GameBoard([["⬛"] * 8 for i in range(8)])
     Battleship.create_ships(computer_board)
@@ -195,7 +195,6 @@ def run_game():
     while turns > 0:
         GameBoard.print_board(user_guess_board)
         user_x_row, user_y_column = Battleship.get_user_input(object)
-        clear()
         clear()
 
         # check if user's duplicate guess
