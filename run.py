@@ -35,7 +35,7 @@ class GameBoard:
         """
         Method used to print the user's board
         """
-        print("  A B C D E F G H")
+        print("   A B C D E F G H")
         print("  +-+-+-+-+-+-+-+-")
         row_number = 1
         for row in self.board:
@@ -163,10 +163,10 @@ def print_rules():
     select to do so
     """
     clear()
-    print("🚢 Let's Play Battleship! 🚢\n")
-    print("🧾 RULES 🧾 :\n")
-    print("- There are 5 battleships 🚢 hidden in the board.")
-    print("- You have 20 missiles 🚀 to sink them all.")
+    print("🚢  Let's Play Battleship! 🚢\n")
+    print("🧾  RULES 🧾 :\n")
+    print("- There are 5 battleships 🚢  hidden in the board.")
+    print("- You have 20 missiles 🚀  to sink them all.")
     print("- If you sink all 5 battleships before running out")
     print("  of missiles you win!")
     print("- You must choose your missiles coordinates by selecting")
@@ -216,7 +216,7 @@ def run_game():
         # let the user know how many turns are left
         else:
             turns -= 1
-            print(f"You have {turns} 🚀 missiles remaining")
+            print(f"You have {turns} 🚀  missiles remaining")
 
             if turns == 0:
                 print("Sorry you ran out of missiles")
