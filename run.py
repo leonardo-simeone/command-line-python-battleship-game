@@ -210,7 +210,36 @@ def print_rules():
             if turns == 0:
                 print("Sorry you ran out of missiles")
                 GameBoard.print_board(user_guess_board)
-                break
+def play_again_option():
+    """
+    Function to ask the user once they've finished whether
+    they want to play again or end the program
+    """
+    try:
+        play_again = input(
+            "\nDo you want to play again? "
+            "press 'Y' for yes or 'N' for no: \n").upper()
+        while play_again not in 'Y,N':
+            print(
+                f"{play_again} is not a valid option please select "
+                "an option between 'Y' and 'N'")
+            play_again = input(
+                "\nDo you want to play again? "
+                "press 'Y' for yes or 'N' for no: \n").upper()
+
+    except Exception as e:
+        print("Please select a valid option")
+        return play_again
+
+    if play_again == "Y":
+        clear()
+        run_game()
+
+    if play_again == "N":
+        return print("Thanks for Playing!")
+
+    if play_again == "":
+        print("Please select a valid option")
+        return play_again_option()
 
 
-run_game()
