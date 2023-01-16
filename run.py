@@ -151,7 +151,7 @@ def print_intro():
     Function to print the welcome message to the user and
     offer them the options from intro_to game function
     """
-    print("Hello and Welcome to 🚢 Battleship Game 🚢")
+    print("Hello and Welcome to 🚢  Battleship Game 🚢")
     print("🔧 Built in python by Leonardo Simeone 👦\n")
     print("To start the game please select one of")
     print("the two options 👇 :\n")
@@ -163,15 +163,16 @@ def print_rules():
     select to do so
     """
     clear()
-    print("🚢  Let's Play Battleship! 🚢\n")
-    print("🧾  RULES 🧾 :\n")
-    print("- There are 5 battleships 🚢  hidden in the board.")
-    print("- You have 20 missiles 🚀  to sink them all.")
-    print("- If you sink all 5 battleships before running out")
-    print("  of missiles you win!")
-    print("- You must choose your missiles coordinates by selecting")
-    print("  a row in the board between 1 and 8 as well as a column")
-    print("  between A and H.\n")
+    print(
+        "🚢  Let's Play Battleship! 🚢\n\n"
+        "🧾  RULES 🧾 :\n\n"
+        "- There are 5 battleships 🚢  hidden in the board.\n"
+        "- You have 20 missiles 🚀  to sink them all.\n"
+        "- If you sink all 5 battleships before running out\n"
+        "  of missiles you win!\n"
+        "- You must choose your missiles coordinates by selecting\n"
+        "  a row in the board between 1 and 8 as well as a column\n"
+        "  between A and H.\n")
 
 
 def run_game():
