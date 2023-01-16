@@ -107,15 +107,15 @@ class Battleship:
         """
         try:
             user_choice = input(
-                "To see the rules press 'R', to start the game "
-                "press 'G': \n").upper()
+                "To see the rules press 'R'\n"
+                "To start the game press 'G': \n").upper()
             while user_choice not in 'R,G':
                 print(
                     f"{user_choice} is not a valid option please select "
                     "an option between 'R' and 'G'")
                 user_choice = input(
-                    "To see the rules press 'R', to start the game "
-                    "press 'G': \n").upper()
+                    "To see the rules press 'R'\n"
+                    "To start the game press 'G': \n").upper()
 
         except Exception as e:
             print("Please select a valid option")
@@ -156,8 +156,9 @@ def print_intro():
         "🚢  Battleship Game 🚢\n"
         "🔧 Built in python🔧\n"
         "by Leonardo Simeone 👦\n"
-        "To start the game please select\n"
-        "one of the two options below 👇 :\n")
+        "To start the game please\n"
+        "select one of the two options\n"
+        "below 👇 :\n")
 
 def print_rules():
     """
@@ -171,13 +172,12 @@ def print_rules():
         "- There are 5 battleships 🚢\n"
         "  hidden in the board.\n"
         "- You have 20 missiles 🚀\n"
-        "  to sink them all.\n"
-        "- To win sink the battleships before\n"
+        "- To win, sink them all before\n"
         "  running out of missiles.\n"
-        "- You must choose your missiles\n"
-        "  coordinates by selecting a row\n"
-        "  in the board between 1 and 8\n"
-        "  also a column between A and H.\n")
+        "- Choose your missiles\n"
+        "  coordinates by selecting a\n"
+        "  row between 1 and 8, also\n"
+        "  a column between A and H.\n")
 
 
 def run_game():
