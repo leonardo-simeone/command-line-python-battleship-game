@@ -51,6 +51,9 @@ class Battleship:
     it will get and return the user's inputs for row and column,
     it will handle any user input errors, return the user input
     and count the hit battleships.
+    it will also handle the game intro (welcoming), giving the
+    user the option to print (see/read) the rules or to start
+    the game right away.
     """
 
     def __init__(self, board):
@@ -255,3 +258,5 @@ def play_again_option():
         return play_again_option()
 
 
+print_intro()
+Battleship.intro_to_game(object)
