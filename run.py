@@ -94,6 +94,7 @@ class Battleship:
                     'please select a column between A and H')
                 user_y_column = input(
                     "Enter the column of the ship: \n").upper()
+            clear()
             return int(user_x_row) - 1, GameBoard.convert_letters_to_numbers()[user_y_column]  # noqa
         except Exception as e:
             print("That's not even in the ocean🤔")
@@ -185,7 +186,7 @@ def run_game():
     Function to run the game utilizing the Gameboard and Battleship classes
     and their corresponding methods as well as complement functions
     """
-    print("🚢  Let's Play Battleship! 🚢\n")
+    print("🚢  Let's Play Battleship! 🚢")
     computer_board = GameBoard([["⬛"] * 8 for i in range(8)])
     user_guess_board = GameBoard([["⬛"] * 8 for i in range(8)])
     Battleship.create_ships(computer_board)
