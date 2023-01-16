@@ -164,8 +164,8 @@ def print_rules():
     """
     clear()
     print(
-        "🚢  Let's Play Battleship! 🚢\n\n"
-        "🧾  RULES 🧾 :\n\n"
+        "🚢  Let's Play Battleship! 🚢\n"
+        "🧾  RULES 🧾 :\n"
         "- There are 5 battleships 🚢  hidden in the board.\n"
         "- You have 20 missiles 🚀  to sink them all.\n"
         "- If you sink all 5 battleships before running out\n"
