@@ -151,11 +151,13 @@ def print_intro():
     Function to print the welcome message to the user and
     offer them the options from intro_to game function
     """
-    print("Hello and Welcome to 🚢  Battleship Game 🚢")
-    print("🔧 Built in python by Leonardo Simeone 👦\n")
-    print("To start the game please select one of")
-    print("the two options 👇 :\n")
-
+    print(
+        "Hello and Welcome to: \n"
+        "🚢  Battleship Game 🚢\n"
+        "🔧 Built in python🔧\n"
+        "by Leonardo Simeone 👦\n"
+        "To start the game please select\n"
+        "one of the two options below 👇 :\n")
 
 def print_rules():
     """
@@ -166,13 +168,16 @@ def print_rules():
     print(
         "🚢  Let's Play Battleship! 🚢\n"
         "🧾  RULES 🧾 :\n"
-        "- There are 5 battleships 🚢  hidden in the board.\n"
-        "- You have 20 missiles 🚀  to sink them all.\n"
-        "- If you sink all 5 battleships before running out\n"
-        "  of missiles you win!\n"
-        "- You must choose your missiles coordinates by selecting\n"
-        "  a row in the board between 1 and 8 as well as a column\n"
-        "  between A and H.\n")
+        "- There are 5 battleships 🚢\n"
+        "  hidden in the board.\n"
+        "- You have 20 missiles 🚀\n"
+        "  to sink them all.\n"
+        "- To win sink the battleships before\n"
+        "  running out of missiles.\n"
+        "- You must choose your missiles\n"
+        "  coordinates by selecting a row\n"
+        "  in the board between 1 and 8\n"
+        "  also a column between A and H.\n")
 
 
 def run_game():
@@ -233,7 +238,7 @@ def play_again_option():
     """
     try:
         play_again = input(
-            "\nDo you want to play again? "
+            "\nDo you want to play again? \n"
             "press 'Y' for yes or 'N' for no: \n").upper()
         while play_again not in 'Y,N':
             print(
