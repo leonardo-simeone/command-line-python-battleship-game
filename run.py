@@ -1,4 +1,12 @@
+import os
 import random  # Import random module
+
+
+def clear():
+    """
+    clear function to clean up the terminal
+    """
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 class GameBoard:
