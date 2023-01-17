@@ -94,7 +94,6 @@ class Battleship:
                     'please select a column between A and H')
                 user_y_column = input(
                     "Enter the column of the ship: \n").upper()
-            clear()
             return int(user_x_row) - 1, GameBoard.convert_letters_to_numbers()[user_y_column]  # noqa
         except Exception as e:
             print("That's not even in the ocean🤔")
@@ -124,11 +123,9 @@ class Battleship:
 
         if user_choice == "R":
             print_rules()
-            run_game()
 
         if user_choice == "G":
             clear()
-            run_game()
 
         if user_choice == "":
             print("Please select a valid option")
@@ -270,3 +267,4 @@ def play_again_option():
 
 print_intro()
 Battleship.intro_to_game(object)
+run_game()
