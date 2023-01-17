@@ -83,15 +83,15 @@ class Battleship:
             user_x_row = input("Enter the row of the ship: \n")
             while user_x_row not in '1,2,3,4,5,6,7,8':
                 print(
-                    f'{user_x_row} is not an appropriate choice, '
-                    'please select a row between 1 and 8')
+                    f"{user_x_row} is not an appropriate choice,\n"
+                    "please select a row between 1-8")
                 user_x_row = input("Enter the row of the ship: \n")
 
             user_y_column = input("Enter the column of the ship: \n").upper()
             while user_y_column not in 'A,B,C,D,E,F,G,H':
                 print(
-                    f'{user_y_column} is not an appropriate choice, '
-                    'please select a column between A and H')
+                    f"{user_y_column} is not an appropriate choice, \n"
+                    "please select a column between A-H")
                 user_y_column = input(
                     "Enter the column of the ship: \n").upper()
             return int(user_x_row) - 1, GameBoard.convert_letters_to_numbers()[user_y_column]  # noqa
@@ -101,7 +101,7 @@ class Battleship:
 
     def intro_to_game(self):
         """
-        Method used to get the user's inputs, to select
+        Method used to get the user's inputs to select
         whether they want to read the rules and start the
         game or simply start the game
         """
@@ -111,8 +111,9 @@ class Battleship:
                 "To start the game press 'G': \n").upper()
             while user_choice not in 'R,G':
                 print(
-                    f"{user_choice} is not a valid option please"
-                    "select an option between 'R' and 'G'")
+                    f"{user_choice} is not a valid option\n"
+                    "please select an option between\n"
+                    "'R' and 'G'")
                 user_choice = input(
                     "To see the rules press 'R'\n"
                     "To start the game press 'G': \n").upper()
@@ -189,7 +190,7 @@ def run_game():
     Battleship.create_ships(computer_board)
 
     # start 20 turns
-    turns = 64
+    turns = 20
     while turns > 0:
         GameBoard.print_board(user_guess_board)
         user_x_row, user_y_column = Battleship.get_user_input(object)
@@ -215,7 +216,9 @@ def run_game():
 
         # check for win or lose
         if Battleship.count_destroyed_ships(user_guess_board) == 5:
-            print("CONGRATULATIONS! You hit all 5 battleships!🎉🎈")
+            print(
+                "CONGRATULATIONS! You hit all\n"
+                "five battleships!🎉 🎈")
             GameBoard.print_board(user_guess_board)
             print("You've Won!")
             return play_again_option()
@@ -243,10 +246,10 @@ def play_again_option():
             "press 'Y' for yes or 'N' for no: \n").upper()
         while play_again not in 'Y,N':
             print(
-                f"{play_again} is not a valid option please"
-                "select an option between 'Y' and 'N'")
+                f"{play_again} is not a valid option\n"
+                "please select an option between\n'Y' and 'N'")
             play_again = input(
-                "\nDo you want to play again? "
+                "\nDo you want to play again? \n"
                 "press 'Y' for yes or 'N' for no: \n").upper()
 
     except Exception as e:
