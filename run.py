@@ -111,8 +111,8 @@ class Battleship:
                 "To start the game press 'G': \n").upper()
             while user_choice not in 'R,G':
                 print(
-                    f"{user_choice} is not a valid option please select "
-                    "an option between 'R' and 'G'")
+                    f"{user_choice} is not a valid option please"
+                    "select an option between 'R' and 'G'")
                 user_choice = input(
                     "To see the rules press 'R'\n"
                     "To start the game press 'G': \n").upper()
@@ -147,7 +147,7 @@ class Battleship:
 def print_intro():
     """
     Function to print the welcome message to the user and
-    offer them the options from intro_to game function
+    offer them the options from intro_to game method
     """
     print(
         "Hello and Welcome to: \n"
@@ -189,7 +189,7 @@ def run_game():
     Battleship.create_ships(computer_board)
 
     # start 20 turns
-    turns = 20
+    turns = 64
     while turns > 0:
         GameBoard.print_board(user_guess_board)
         user_x_row, user_y_column = Battleship.get_user_input(object)
@@ -243,8 +243,8 @@ def play_again_option():
             "press 'Y' for yes or 'N' for no: \n").upper()
         while play_again not in 'Y,N':
             print(
-                f"{play_again} is not a valid option please select "
-                "an option between 'Y' and 'N'")
+                f"{play_again} is not a valid option please"
+                "select an option between 'Y' and 'N'")
             play_again = input(
                 "\nDo you want to play again? "
                 "press 'Y' for yes or 'N' for no: \n").upper()
