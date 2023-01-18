@@ -68,7 +68,15 @@ To improve user experience, I included emojis in the interface, this way the gam
 
 ![Win/Lose Message and Option to Play Again or End Program](documentation/win-lose-message-option-play-again.png)
 
-Welcome Leonardo Simeone,
+### Future Features
+
+There are two additional features that I think would improve the user experience that I would like to add to the project in the future.
+
+- Customizable Grid Size.
+    - I would like to add the functionality to the program that would allow the user to choose from at least three grid sizes, 5x5, 8x8 and 10x10.
+- Different Battleship Sizes.
+    - I want to add the logic to the program that will allow the computer create different size battleships, the user would have a more fun experience when not one but several cells will be destroyed when a battleship is hit.
+
 
 This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
