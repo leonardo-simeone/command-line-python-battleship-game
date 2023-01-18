@@ -90,7 +90,84 @@ For this program I used several tools and technologies listed below:
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Adobe Photoshop](https://www.adobe.com/ie/products/photoshop.html): It was used to resize and cut images as well as framing several images together into one.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## Data Model
+
+### Flowchart
+
+To follow best practice, a flowchart was created for the app's logic,
+and mapped out before coding began using a free version of
+[Diagrams.net](https://app.diagrams.net/).
+
+Below is the flowchart of the main process of this Python program. It shows the entire cycle of the program.
+
+![Flowchart](documentation/game-flowchart.png)
+
+### Classes & Functions
+
+The program uses classes as a blueprint for the project's objects (OOP). This allows for the object to be reusable.
+
+```python
+class GameBoard:
+    """
+    Create an object of an entity board. This class
+    will create 2 objects, the user's board and the computer's
+    board. It also has methods that will allow to print the user's board
+    while keeping the computer's hidden and return the column value to the
+    user's input key by using the letters_to_numbers dictionary.
+    """
+
+    def __init__(self, board):
+        self.board = board
+
+class Battleship:
+    """
+    Create battleship objects in a board entity. This class
+    will create 5 battleships. Via its methods it will add them
+    to the hidden computer's board,
+    it will get and return the user's inputs for row and column,
+    it will handle any user input errors, return the user input
+    and count the hit battleships.
+    it will also handle the game intro (welcoming), giving the
+    user the option to print (see/read) the rules or to start
+    the game right away.
+    """
+
+    def __init__(self, board):
+        self.board = board
+```
+
+The primary functions and methods used on this application are:
+
+- `clear()`
+    - Clears the screen when necessary to create space for new printouts.
+- `convert_letters_to_numbers()`
+    - Retrieves the corresponding number to the letter the user will input.
+- `print_board(self)`
+    - Prints an eight by eight user board grid.
+- `create_ships(self)`
+    - Creates the five computer's hidden battleships in random positions in the board.
+- `get_user_input(self)`
+    - Requests and returns the user's inputs for row and column, it also handles errors when user input not in range.
+- `intro_to_game(self)`
+    -  Requests and returns the user's input to select whether they want to read the rules and start the game or simply start the game, it also handles errors when user input not in range.
+- `count_destroyed_ships(self)`
+    - Counts how many of the computer's hidden battleships have been hit by the user.
+- `print_intro()`
+    - Prints the welcome message to the user and offers them the options from intro_to game method.
+- `print_rules()`
+    - Prints the game rules should the user chooses to do so.
+- `play_again_option()`
+    - Asks the user once they've finished the game whether they want to play again or end the program.
+- `run_game()`
+    - Executes the main logic of the game.
+
+
+### Imports
+
+I've used the following Python packages and/or external imported packages.
+
+- `os`: used for adding a `clear()` function.
+- `random`: used to get a random choice from a list.
 
 ## Reminders
 
