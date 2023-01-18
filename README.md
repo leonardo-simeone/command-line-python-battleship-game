@@ -77,6 +77,18 @@ There are two additional features that I think would improve the user experience
 - Different Battleship Sizes.
     - I want to add the logic to the program that will allow the computer create different size battleships, the user would have a more fun experience when not one but several cells will be destroyed when a battleship is hit.
 
+## Tools & Technologies Used
+
+For this program I used several tools and technologies listed below:
+
+- [Diagrams.net](https://app.diagrams.net/) used for logic design process.
+- [Python](https://www.python.org) used as the back-end programming language.
+- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [GitHub](https://github.com) used for secure online code storage.
+- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
+- [Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) used to help generate the Markdown files.
+- [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
+- [Adobe Photoshop](https://www.adobe.com/ie/products/photoshop.html): It was used to resize and cut images as well as framing several images together into one.
 
 This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
