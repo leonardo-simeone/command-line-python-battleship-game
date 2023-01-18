@@ -23,3 +23,9 @@ I manually tested the functionality of the program:
 - By the time the user gets to finish the game, whether it is by winning it or loosing it, a corresponding message is printed for each case and the option to play again or not (end the program) is given to the user. I manually made sure that these features occur without any issues, including the error handling when the choice between "Y" for play again or "N" for no, I don't want to play again, are out of range or left blank (invalid). Please note that to be able to show the screenshot of the winning message on the mock console, the number of turns was increased to 64 to avoid time comsumption waiting for a win, it was then reverted back to 20 for the final version of the game. Please see image showing the steps taken for said tests in the same order as described.
 
 ![Win/Lose Play Again Test](documentation/win-lose-play-again-test.png)
+
+### Browsers Compatibility
+
+- I tested compatibility and functionality across different browsers. I used Chrome, Edge and Firefox, and in every single one of them the program works and responds well. In spite of the emojis being slightly cut in Firefox, the functionality of the game is still optimal.
+
+![Browsers Test](documentation/browsers-test.png)
