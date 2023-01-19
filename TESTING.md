@@ -59,3 +59,49 @@ Issues resolved using the CI Python Linter:
 | run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py) | ![screenshot](documentation/noqa-e501-exception.png) | E501 line too long noqa exception |
 | run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py) | ![screenshot](documentation/w293-blank-line-contains-whitespace.png) | W293 blank line contains whitespace |
 | run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py) | ![screenshot](documentation/w292-no-newline-end-file.png) | W292 no newline at end of file |
+
+## Defensive Programming
+
+I carried out all tests refering to defensive programming (defensive design). I manually tested and made sure that the user could not break the program regardless of the error caused. The user was always prompted with an appropriate message and the input was requested again.
+
+Python:
+- Users must enter a valid letter/word/string when prompted
+- Users must choose from a specific list only
+
+![Defensive Programming](documentation/defensive-programming.png)
+
+## Bugs
+
+I encountered five bugs which are listed below:
+
+- Python `E501 line too long` (93 > 79 characters)
+
+    ![line-too-long](documentation/e501-line-too-long.png)
+
+    - To fix this, I pressed enter right after the bracket to ascertain the correct indentation and then I broke the line at a length where it was acceptable for python. The same fix was applied for the rest of the same kind.
+
+- Python `E501 line too long` (131 > 79 characters) noqa exception.
+
+    ![noqa Excepcion](documentation/noqa-e501-exception.png)
+
+    - To fix this, I used the noqa exception. I am aware that this is only valid when there's no other way to fix the issue, on this ocassion the line of code contains variables that are too long and trying to change the single line into several would have caused an error in the code. Besides the one in the screenshoot, there's only one more ocurrence of this instance on line 200 to which the same fix was applied.
+
+    ![noqa Excepcion 2](documentation/noqa-e501-exception-2.png)
+
+- Python `W293 blank line contains whitespace`
+
+    ![Whitespace](documentation/w293-blank-line-contains-whitespace.png)
+
+    - To fix this, I deleted the redundant whitespace.
+
+- Python `W292 no newline at end of file`
+
+    ![New Line End of File](documentation/w292-no-newline-end-file.png)
+
+    - To fix this, I added a new line at the end of the file.
+
+- Python `expected 2 blank lines, found 1` pycodestyle(E302)
+
+    ![Blank Spaces Expected](documentation/blank-spaces-expected.png)
+
+    - To fix this, I added an extra blank line and made sure there were 2 blank lines before any class or function.
