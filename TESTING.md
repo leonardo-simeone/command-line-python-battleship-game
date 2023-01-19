@@ -105,3 +105,15 @@ I encountered five bugs which are listed below:
     ![Blank Spaces Expected](documentation/blank-spaces-expected.png)
 
     - To fix this, I added an extra blank line and made sure there were 2 blank lines before any class or function.
+
+## Unfixed Bugs
+
+One unfixed bug remains. In spite of different naive tries to resolve it, I later learned that this is a known issue that occurs in the mock terminal.
+
+- When using the helper `clear()` function, partial text from the rules print, above the height of the terminal does not clear, and remains when you scroll up.
+
+    ![Terminal Not Clear Bug](documentation/partial-rules-message-not-cleared.png)
+
+    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
+    - Attempted fix: I tried to call the `clear()` function in different steps of the logic to try and clear the remaining print out, but it still remained.
+
