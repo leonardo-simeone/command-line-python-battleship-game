@@ -253,18 +253,41 @@ You can fork this repository by using the following steps:
 
 The local program performance is optimal as well as the deployed version, the only significant difference as stated in the [TESTING.md](TESTING.md) file more specifically in the **Unfixed Bugs** section is that in the local version the screen clears completetly after the `clear()` function is called whereas in the deployed version when you scroll up, a "residue" from the "Rules" print out can seen.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Credits
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Content
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+| Source | Location | Notes |
+| --- | --- | --- |
+| [Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files |
+| [Blog Finxter](https://blog.finxter.com/how-to-print-a-string-and-an-integer/#:~:text=We%20can%20accomplish%20this%20task,with%20the%20print()%20function) | Print string and integer together (method 4 used) | "How to print string and integer together in python passing arguments" |
+| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/create-python-list/exercises/intro-list) | Tutorial how to use lists | Python Lists |
+| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/dictionaries-introduction/exercises/intro-to-dictionary) | Tutorial how to use dictionaries | Python Dictionaries |
+| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/learn-python-loops/exercises/introduction-to-loops) | Tutorial how to use loops | Python Loops |
+| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/data-types/exercises/types) | Tutorial how to use Classes | Python Classes |
+| [YouTube](https://www.youtube.com/watch?v=7Ki_2gr0rsE&list=WL&index=3) | Battleship | Understanding the coding logic behind a basic battleship game |
 
-Connect your GitHub repository and deploy as normal.
+### Media
 
-## Constraints
+| Source | Location | Type | Notes |
+| --- | --- | --- | --- |
+| [Battleship Emoji](https://emojipedia.org/ship/) | entire program | emoji | emoji to represent a battleship |
+| [Rules Emoji](https://emojipedia.org/receipt/) | entire program | emoji | emoji to represent rules sheet |
+| [Missile Emoji](https://emojipedia.org/rocket/) | entire program | emoji | emoji to represent a missile |
+| [Face Emoji](https://emojipedia.org/boy/) | intro to program | emoji | emoji to represent the programmer |
+| [Spanner Emoji](https://emojipedia.org/wrench/) | intro to program | emoji | emoji to represent programming tool |
+| [Pointing Down Emoji](https://emojipedia.org/backhand-index-pointing-down/) | intro to program | emoji | emoji to represent direction down |
+| [Cross Mark Emoji](https://emojipedia.org/cross-mark/) | entire program | emoji | emoji to represent a missed shot |
+| [Cross Face Emoji](https://emojipedia.org/persevering-face/) | entire program | emoji | emoji to represent frustration when a shot is missed |
+| [Fire Emoji](https://emojipedia.org/fire/) | entire program | emoji | emoji to represent battleship destroyed |
+| [Alert Hand Emoji](https://emojipedia.org/hand-with-fingers-splayed/) | entire program | emoji | emoji to represent alert/stop when trying to use duplicate coordinates |
+| [Thinking Face Emoji](https://emojipedia.org/thinking-face/) | entire program | emoji | emoji to represent invalid missile coordinates |
+| [Celebration Emoji 1](https://emojipedia.org/party-popper/) | winning end game | emoji | emoji to represent celebration when game is won |
+| [Celebration Emoji 2](https://emojipedia.org/balloon/) | winning end game | emoji | emoji to represent celebration when game is won |
+| [Blank Square Emoji](https://emojipedia.org/black-large-square/) | entire program | emoji | emoji to represent blank/available space |
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### Acknowledgements
 
------
-Happy coding!
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his fantastic support throughout the development of this project, for going the extra mile to be as approachable and understanding as humanly possible.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; as well as my fellow students for the constant feedback and support.
+- I would like to thank my wife Amanda, for believing in me, and supporting me unconditionally.

@@ -32,7 +32,7 @@ I manually tested the functionality of the program:
 
 ## Responsiveness
 
-- I manually tested responsiveness with the help of devtools in Chrome, I checked multiple times that the program responds well regardless of the screen size of the device, I tested that no feauture is affected by screen size change. I tested respponsiveness starting at 320px wide to 1470px wide and beyond.
+- I manually tested responsiveness with the help of devtools in Chrome, I checked multiple times that the program responds well regardless of the screen size of the device, I tested that no feauture is affected by screen size change. I tested responsiveness starting at 320px wide to 1470px wide and beyond.
 
 ![Responsiveness Test](documentation/responsiveness-test.png)
 
