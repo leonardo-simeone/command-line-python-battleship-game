@@ -24,8 +24,38 @@ I manually tested the functionality of the program:
 
 ![Win/Lose Play Again Test](documentation/win-lose-play-again-test.png)
 
-### Browsers Compatibility
+## Browsers Compatibility
 
 - I tested compatibility and functionality across different browsers. I used Chrome, Edge and Firefox, and in every single one of them the program works and responds well. In spite of the emojis being slightly cut in Firefox, the functionality of the game is still optimal.
 
 ![Browsers Test](documentation/browsers-test.png)
+
+## Responsiveness
+
+- I manually tested responsiveness with the help of devtools in Chrome, I checked multiple times that the program responds well regardless of the screen size of the device, I tested that no feauture is affected by screen size change. I tested respponsiveness starting at 320px wide to 1470px wide and beyond.
+
+![Responsiveness Test](documentation/responsiveness-test.png)
+
+## Code Validation
+
+### Python
+
+I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+
+| File | CI URL | Raw URL | Combined |
+| --- | --- | --- | --- |
+| PP3 *run.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py` | `https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py` |
+
+
+![Code Validation](documentation/python-code-validation-pass.png)
+
+
+
+Issues resolved using the CI Python Linter:
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py) | ![screenshot](documentation/e501-line-too-long.png) | E501 line too long |
+| run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py) | ![screenshot](documentation/noqa-e501-exception.png) | E501 line too long noqa exception |
+| run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py) | ![screenshot](documentation/w293-blank-line-contains-whitespace.png) | W293 blank line contains whitespace |
+| run.py | [CI PEP8](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py) | ![screenshot](documentation/w292-no-newline-end-file.png) | W292 no newline at end of file |
