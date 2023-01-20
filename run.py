@@ -83,14 +83,14 @@ class Battleship:
             user_x_row = input("Enter the row of the ship: \n")
             while user_x_row not in '1,2,3,4,5,6,7,8':
                 print(
-                    f"{user_x_row} is not an appropriate choice,\n"
+                    f"\n🛑 {user_x_row} is not an appropriate choice,\n"
                     "please select a row between 1-8")
                 user_x_row = input("Enter the row of the ship: \n")
 
             user_y_column = input("Enter the column of the ship: \n").upper()
             while user_y_column not in 'A,B,C,D,E,F,G,H':
                 print(
-                    f"{user_y_column} is not an appropriate choice, \n"
+                    f"\n🛑 {user_y_column} is not an appropriate choice, \n"
                     "please select a column between A-H")
                 user_y_column = input(
                     "Enter the column of the ship: \n").upper()
@@ -111,7 +111,7 @@ class Battleship:
                 "To start the game press 'G': \n").upper()
             while user_choice not in 'R,G':
                 print(
-                    f"{user_choice} is not a valid option\n"
+                    f"\n🛑 {user_choice} is not a valid option\n"
                     "please select an option between\n"
                     "'R' and 'G'")
                 user_choice = input(
@@ -246,7 +246,7 @@ def play_again_option():
             "press 'Y' for yes or 'N' for no: \n").upper()
         while play_again not in 'Y,N':
             print(
-                f"{play_again} is not a valid option\n"
+                f"\n🛑 {play_again} is not a valid option\n"
                 "please select an option between\n'Y' and 'N'")
             play_again = input(
                 "\nDo you want to play again? \n"
