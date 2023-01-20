@@ -12,9 +12,7 @@ This game hopes to offer an online option for those battleship board game fans a
 
 ### Flowchart
 
-In order to design the game logic, I initially created a flowchart with the basic steps that the program needed to take for it to function. To create said flowchart I used [Diagrams.net](https://app.diagrams.net/) which is an online tool useful to build flowcharts among other things.
-
-![Flowchart](documentation/game-flowchart.png)
+In order to design the game logic, I initially created a flowchart with the basic steps that the program needed to take for it to function. To create said flowchart I used [Diagrams.net](https://app.diagrams.net/) which is an online tool useful to build flowcharts among other things. The flowchart can be found in the [Data Model](#data-model).
 
 ### Emojis
 
@@ -251,7 +249,7 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-The local program performance is optimal as well as the deployed version, the only significant difference as stated in the [TESTING.md](TESTING.md) file more specifically in the **Unfixed Bugs** section is that in the local version the screen clears completetly after the `clear()` function is called whereas in the deployed version when you scroll up, a "residue" from the "Rules" print out can seen.
+The local program performance is optimal as well as the deployed version, the only significant difference as stated in the [TESTING.md](TESTING.md) file more specifically in the **Unfixed Bugs** section is that in the local version the screen clears completetly after the `clear()` function is called whereas in the deployed version when you scroll up, a "residue" from the "Rules" print out can be seen.
 
 ## Credits
 
@@ -260,12 +258,12 @@ The local program performance is optimal as well as the deployed version, the on
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Blog Finxter](https://blog.finxter.com/how-to-print-a-string-and-an-integer/#:~:text=We%20can%20accomplish%20this%20task,with%20the%20print()%20function) | Print string and integer together (method 4 used) | "How to print string and integer together in python passing arguments" |
-| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/create-python-list/exercises/intro-list) | Tutorial how to use lists | Python Lists |
-| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/dictionaries-introduction/exercises/intro-to-dictionary) | Tutorial how to use dictionaries | Python Dictionaries |
-| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/learn-python-loops/exercises/introduction-to-loops) | Tutorial how to use loops | Python Loops |
-| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/data-types/exercises/types) | Tutorial how to use Classes | Python Classes |
-| [YouTube](https://www.youtube.com/watch?v=7Ki_2gr0rsE&list=WL&index=3) | Battleship | Understanding the coding logic behind a basic battleship game |
+| [Blog Finxter](https://blog.finxter.com/how-to-print-a-string-and-an-integer/#:~:text=We%20can%20accomplish%20this%20task,with%20the%20print()%20function) | run.py | How to print string and integer together in python passing arguments (method 4 used) |
+| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/create-python-list/exercises/intro-list) | run.py | Tutorial how to use lists |
+| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/dictionaries-introduction/exercises/intro-to-dictionary) | run.py | Tutorial how to use dictionaries |
+| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/learn-python-loops/exercises/introduction-to-loops) | run.py | Tutorial how to use loops |
+| [Codecademy](https://www.codecademy.com/courses/learn-python-3/lessons/data-types/exercises/types) | run.py | Tutorial how to use Classes |
+| [YouTube](https://www.youtube.com/watch?v=7Ki_2gr0rsE&list=WL&index=3) | run.py | Understanding the coding logic behind a basic battleship game in Python |
 
 ### Media
 
@@ -285,6 +283,7 @@ The local program performance is optimal as well as the deployed version, the on
 | [Celebration Emoji 1](https://emojipedia.org/party-popper/) | winning end game | emoji | emoji to represent celebration when game is won |
 | [Celebration Emoji 2](https://emojipedia.org/balloon/) | winning end game | emoji | emoji to represent celebration when game is won |
 | [Blank Square Emoji](https://emojipedia.org/black-large-square/) | entire program | emoji | emoji to represent blank/available space |
+| [Stop Sign Emoji](https://emojipedia.org/stop-sign/) | entire program | emoji | emoji to represent invalid option |
 
 ### Acknowledgements
 
