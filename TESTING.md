@@ -6,7 +6,7 @@ Return back to the [README.md](README.md) file.
 
 I manually tested the functionality of the program:
 
-### Intro to Game/Rules and Game or Game
+### Game Intro Text > Rules and Game || Game
 
 - I made sure that when the program starts, the welcome message is printed and that the user can select to see the rules by pressing R or to start the game and skip the rules by pressing G and in both cases the corresponding screen is printed. Also I tested that whether the user input is not within range or is simply empty, the errors are handled properly. Please see image showing the steps taken for said tests in the same order as described.
 
@@ -18,7 +18,7 @@ I manually tested the functionality of the program:
 
 ![Gameplay Test](documentation/gameplay-test.png)
 
-### Win-Lose and Play Again
+### Win-Lose && Play Again
 
 - By the time the user gets to finish the game, whether it is by winning it or loosing it, a corresponding message is printed for each case and the option to play again or not (end the program) is given to the user. I manually made sure that these features occur without any issues, including the error handling when the choice between "Y" for play again or "N" for no, I don't want to play again, are out of range or left blank (invalid). Please note that to be able to show the screenshot of the winning message on the mock console, the number of turns was increased to 64 to avoid time comsumption waiting for a win, it was then reverted back to 20 for the final version of the game. Please see image showing the steps taken for said tests in the same order as described.
 
@@ -42,10 +42,7 @@ I manually tested the functionality of the program:
 
 I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
-| File | CI URL | Raw URL | Combined |
-| --- | --- | --- | --- |
-| PP3 *run.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py` | `https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/leonardo-simeone/command-line-python-battleship-game/main/run.py` |
-
+This is the completed validated code:
 
 ![Code Validation](documentation/python-code-validation-pass.png)
 
@@ -108,7 +105,7 @@ I encountered five bugs which are listed below:
 
 ## Unfixed Bugs
 
-One unfixed bug remains. In spite of different naive tries to resolve it, I later learned that this is a known issue that occurs in the mock terminal.
+Two unfixed bugs remain. In spite of different naive tries to resolve it, I later learned that this is a known issue that occurs in the mock terminal.
 
 - When using the helper `clear()` function, partial text from the rules print, above the height of the terminal does not clear, and remains when you scroll up.
 
@@ -117,3 +114,11 @@ One unfixed bug remains. In spite of different naive tries to resolve it, I late
     - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
     - Attempted fix: I tried to call the `clear()` function in different steps of the logic to try and clear the remaining print out, but it still remained.
 
+- When a user types `CTRL + C`, the application throws the following error:
+
+    ![CTRL-C Error](documentation/ctrl-c-error.png)
+
+    - This is known issue.
+    - Potential fix: I found a potential fix for the issue [here](https://stackoverflow.com/a/1112350), but due to time limitations I was not able to attemp it yet.
+
+Return back to the [README.md](README.md) file.
